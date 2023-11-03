@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P';
+  min-height: 100vh;
+  background: url('./assets/BG.jpg') no-repeat bottom;
+  background-size: cover;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.note {
+  position: relative;
+  width: 334px;
+  height: 585px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 23px;
+}
+
+.bubble {
+  position: absolute;
+  width: 150px;
+  top: 18px;
+  z-index: 1;
+}
+
+.noteImg {
+  position: absolute;
+  z-index: -1;
+}
+
+h2, p {
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 30px 0 -2px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.button {
+  width: 296px;
+  transition: 0.2s;
+  &:hover {
+    width: 93%;
+  }
+}
+.expert {
+  position: relative;
+  animation-name: expert;
+  animation-iteration-count: infinite;
+  animation-duration: .8s;
+}
+
+@keyframes expert {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0;
+  }
+}
+

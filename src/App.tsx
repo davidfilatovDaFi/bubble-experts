@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import expert from './assets/expert.png'
+import bubble from './assets/bubble.png'
+import note from './assets/note.png'
+import start from './assets/start.png'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="note">
+      <img className="noteImg" src={note} alt="" />
+      <div className='content'>
+        <img className="bubble" src={bubble} alt="" />
+        <img className='expert' src={expert} alt="" />
+        <h2>Отправь «Экспертов» в космос!</h2>
+        <p>Душные кликуши появляются и тут и там. Защитись от их «экспертных» оценок — прицелься и отправляй <br /> их в космос!</p>
+        <img className='button' src={start} alt="" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
 export default App
