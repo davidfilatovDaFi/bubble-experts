@@ -1,0 +1,25 @@
+.bubble {
+  position: absolute;
+  width: 146px;
+  top: 18px;
+  z-index: 1;
+}
+
+.expert {
+  position: relative;
+  animation-name: expert;
+  animation-iteration-count: infinite;
+  animation-duration: .8s;
+}
+
+@keyframes expert {
+  0% {
+    top: -7px;
+  }
+  50% {
+    top: -22px;
+  }
+  100% {
+    top: -7px;
+  }
+}

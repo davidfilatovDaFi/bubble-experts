@@ -1,0 +1,107 @@
+.hand {
+  position: relative;
+}
+
+.text {
+  margin: 10px 0 19px;
+}
+
+.click {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  animation: click;
+  animation-iteration-count: infinite;
+
+  animation-duration: 3s;
+}
+
+.hands {
+  position: relative;
+  top: -23px;
+  left: 14px;
+  animation: hands;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+.experts {
+  position: relative;
+}
+
+.expert {
+  animation-name: expert;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+.bubbleGuy {
+  position: absolute;
+  top:-33px;
+  left: -43px;
+  animation-name: bubble;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+@keyframes hands {
+  0% {
+    top: -23px;
+  }
+  50% {
+    top: -53px;
+  }
+  70% {
+    top: -53px;
+  }
+  100% {
+    top: -23px;
+  }
+}
+
+@keyframes click {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes expert {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;    
+    top: -50px;
+  }
+  100% {
+    opacity: 1;
+    top: -220px;
+  }
+}

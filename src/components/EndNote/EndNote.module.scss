@@ -1,0 +1,81 @@
+@keyframes hands {
+  0% {
+    top: -23px;
+  }
+  50% {
+    top: -53px;
+  }
+  70% {
+    top: -53px;
+  }
+  100% {
+    top: -23px;
+  }
+}
+
+@keyframes click {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.click {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  animation: click;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+.hands {
+  position: relative;
+  top: -23px;
+  left: 14px;
+  animation: hands;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+.expertBox {
+  position: relative;
+}
+
+.cannot {
+  position: absolute;
+  animation-name: cannot;
+  top: 10px;
+  left: 0;
+  transform: translate(-25%, -25%);
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+.text {
+  margin: -28px 0 0;
+  padding: 10px 5px;
+}
+
+@keyframes cannot {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;    
+  }
+  100% {
+    opacity: 1;
+  }
+}
