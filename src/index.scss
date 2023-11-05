@@ -7,6 +7,11 @@ html {
 }
 
 body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,11 +35,12 @@ body {
   align-items: center;
   padding: 58px 23px;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .noteImg {
   position: absolute;
-  z-index: -1;
 }
 
 h2, p {
@@ -60,14 +66,5 @@ p {
   }
 }
 
-.sky {
-  width: 300px;
-  
-  height: 200px;
-  position: absolute;
-  top: -200px;
-  z-index: 9999;
-  
-}
 
 

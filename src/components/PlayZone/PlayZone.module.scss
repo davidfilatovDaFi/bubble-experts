@@ -1,0 +1,28 @@
+.play {
+  width: 100%;
+  height: 100vh;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.note {
+  position: absolute;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+  padding-top: 6px;
+  z-index: 2;
+}

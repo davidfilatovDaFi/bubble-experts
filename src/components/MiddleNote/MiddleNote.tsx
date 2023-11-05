@@ -4,8 +4,13 @@ import button from '../../assets/okay.png'
 import style from './MiddleNote.module.scss'
 import clickHand from '../../assets/clickHand.svg'
 import bubbleGuy from '../../assets/bubbleGuy.svg'
+import { useAppDispatch } from '../../store/store'
+import { changeStep } from '../../store/reducers'
 
 const MiddleNote = () => {
+
+  const dispatch = useAppDispatch()
+
   return (
     <div className='content'>
       <div className={style.experts}>
@@ -17,7 +22,7 @@ const MiddleNote = () => {
         <img className={style.click} src={clickHand} alt="" />
       </div>
       <p className={style.text}>Нажимай на «экспертов» и отравляй их к далеким далям в мыльных <br /> пузырях!</p>
-      <img className='button' src={button} alt="" />
+      <img onClick={() => {dispatch(changeStep('end'))}} className='button' src={button} alt="" />
     </div>
   )
 }

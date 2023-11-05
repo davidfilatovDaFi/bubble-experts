@@ -1,18 +1,20 @@
-import { FC } from 'react'
 import StartNote from './StartNote/StartNote'
 import note from '../assets/note.png'
 import MiddleNote from './MiddleNote/MiddleNote';
 import EndNote from './EndNote/EndNote';
+import { useAppSelector } from '../store/store';
 
-const Note: FC<{type: string}> = ({type}) => {
+const Note = () => {
+
+  const step = useAppSelector(state => state.step.step)
 
   return (
     <div className="note">
       <div className="sky"></div>
       <img className="noteImg" src={note} alt="" />
-      {type === "start" ? (
+      {step === "start" ? (
         <StartNote />
-      ) : type === "middle" ? (
+      ) : step === "middle" ? (
         <MiddleNote />
       ) : (
         <EndNote />

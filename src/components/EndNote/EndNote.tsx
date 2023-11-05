@@ -4,8 +4,13 @@ import button from '../../assets/fly.png'
 import clickHand from '../../assets/clickHand.svg'
 import cannot from '../../assets/cannot.svg'
 import style from './EndNote.module.scss'
+import { changeStep } from '../../store/reducers'
+import { useAppDispatch } from '../../store/store'
 
 const EndNote = () => {
+
+  const dispatch = useAppDispatch()
+
   return (
     <div className='content'>
       <div className={style.expertBox}>
@@ -17,7 +22,7 @@ const EndNote = () => {
         <img className={style.click} src={clickHand} alt="" />
       </div>
       <p className={style.text}>но иногда появятся люди, чьи выводы вполне нормальны. Если в пузырь попадут они — с тебя штраф по времени!</p>
-      <img className='button' src={button} alt="" />
+      <img onClick={() => {dispatch(changeStep('play'))}} className='button' src={button} alt="" />
     </div>
   )
 }
