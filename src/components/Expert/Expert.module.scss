@@ -1,0 +1,194 @@
+.expert {
+  position: absolute;
+  right: -100px;
+  bottom: 150px;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  max-width: 80px;
+  opacity: 0;
+}
+
+.phraseBox {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 220px;
+  height: 70px;
+  top: -70px;
+  left: -190px;
+  opacity: 0;
+  animation-name: phrase;
+  animation-delay: 1.4s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  span {
+    z-index: 1;
+    font-size: 11.5px;
+    text-align: center;
+    line-height: 15.49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.left {
+  top: -70px;
+  left: 40px;
+}
+
+.phrase {
+  position: absolute;
+}
+
+.bubble, .cannot {
+  position: absolute;
+  top: -24%;
+  left: -40px;
+}
+
+.bubble {
+  animation-name: bubble;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes phrase {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.e1 {
+  animation-delay: 1s;
+  animation-name: e1;
+  opacity: 0;
+  right: 5%;
+  bottom: 20%;
+}
+
+@keyframes e1 {
+  0% {
+    opacity: 1;
+    right: -10%;
+    bottom: 20%;
+  }
+  100% {
+    opacity: 1;
+    right: 5%;
+    bottom: 15%;
+  }
+}
+
+.e2 {
+  animation-delay: 4s;
+  animation-name: e2;
+  right: 15%;
+  bottom: 10%;
+  .phraseBox {
+    animation-delay: 4.4s;
+  }
+}
+
+@keyframes e2 {
+  0% {
+    opacity: 1;
+    right: -10%;
+    bottom: 10%;
+  }
+  100% {
+    opacity: 1;
+    right: 15%;
+    bottom: 5%;
+  }
+}
+
+.e3 {
+  left: 10%;
+  bottom: 15%;
+  animation-delay: 7s;
+  animation-name: e3;
+  .phraseBox {
+    animation-delay: 7.4s;
+  }
+}
+
+@keyframes e3 {
+  0% {
+    opacity: 1;
+    left: -10%;
+    bottom: 10%;
+  }
+  100% {
+    opacity: 1;
+    left: 10%;
+    bottom: 6%;
+  }
+}
+
+.e4 {
+  left: 5%;
+  bottom: 18%;
+  animation-delay: 10s;
+  animation-name: e4;
+.phraseBox {
+    animation-delay: 10.4s;
+}
+}
+
+@keyframes e4 {
+  0% {
+    opacity: 1;
+    left: -10%;
+    bottom: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 5%;
+    bottom: 18%;
+  }
+}
+
+.none {
+  display: none;
+}
+
+.active {
+  animation-name: active;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s; 
+  opacity: 1;
+}
+
+@keyframes active {
+  0% {
+  }
+  50% {
+    bottom: 120%;
+  }
+  100% {
+    bottom: 120%;
+    display: none;
+  }
+}
+
+.mistake {
+  animation-name: mistake;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  opacity: 1;
+}
+
+@keyframes mistake {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
