@@ -2,59 +2,59 @@ import note from '../../assets/littleNote.svg'
 import timer from '../../assets/timer.svg'
 import style from './PlayZone.module.scss'
 import head from '../../assets/head.svg'
-import expert from '../../assets/character1.svg'
-import expert2 from '../../assets/character2.svg'
-import expert3 from '../../assets/character3.svg'
-import expert4 from '../../assets/character4.svg'
 import Expert from '../Expert/Expert'
+import { experts } from '../../constants/constants'
+import { useState, useEffect, useRef, useMemo } from 'react'
+import { useAppDispatch, useAppSelector } from '../../store/store'
+import { changeStep } from '../../store/stepReducer'
 
 const PlayZone = () => {
+  const [seconds, setSeconds] = useState(59)
+  const interval = useRef<number>()
+  const dispatch = useAppDispatch()
+  const bubbleExperts = useAppSelector(state => state.expertsAmount.amount)
 
-  const experts = [
-    {
-      id: 'e1',
-      url: expert,
-      phrase: 'right',
-      lier: true
-    },
-    {
-      id: 'e2',
-      url: expert2,
-      phrase: 'right',
-      lier: true
-    },
-    {
-      id: 'e3',
-      url: expert3,
-      phrase:'left',
-      lier: true
-    },
-    {
-      id: 'e4',
-      url: expert4,
-      phrase:'left',
-      lier: false
+  const expertsMemo = useMemo(() => {
+    return experts
+  }, [])
+
+  useEffect(() => {
+    interval.current = setInterval(() => {
+        setSeconds(seconds => seconds-1)
+    }, 1000)
+  }, [])
+
+  useEffect(() => {
+    if (seconds === 0 || bubbleExperts === 10) {
+      dispatch(changeStep('result'))
+      clearInterval(interval.current)
     }
-  ]
+  }, [seconds, bubbleExperts])
+  
 
   return (
     <div className={style.play}>
       <div className={style.label}>
         <div className={style.container}>
-          <img src={timer} alt="" />
-          <span>00:16</span>
+          <img src={head} alt="" />
+          <span>{bubbleExperts}/10</span>
         </div>
         <img className={style.note} src={note} alt="" />
       </div>
       <div className={style.label}>
         <div className={style.container}>
-          <img src={head} alt="" />
-          <span>06/10</span>
+          <img src={timer} alt="" />
+          <span>
+            00:{seconds.toString().length == 2 ? seconds : "0" + seconds}
+          </span>
         </div>
         <img className={style.note} src={note} alt="" />
       </div>
-      {experts.map((item) => (
-        <Expert key={item.id} expert={item}/>
+      {expertsMemo.map((item) => (
+        <Expert
+          key={item.id}
+          expert={item}
+        />
       ))}
     </div>
   );

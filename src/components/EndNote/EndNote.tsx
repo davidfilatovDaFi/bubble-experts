@@ -4,7 +4,7 @@ import button from '../../assets/fly.png'
 import clickHand from '../../assets/clickHand.svg'
 import cannot from '../../assets/cannot.svg'
 import style from './EndNote.module.scss'
-import { changeStep } from '../../store/reducers'
+import { changeStep } from '../../store/stepReducer'
 import { useAppDispatch } from '../../store/store'
 
 const EndNote = () => {

@@ -6,6 +6,7 @@
   animation-fill-mode: forwards;
   max-width: 80px;
   opacity: 0;
+  z-index: -999;
 }
 
 .phraseBox {
@@ -65,7 +66,6 @@
 .e1 {
   animation-delay: 1s;
   animation-name: e1;
-  opacity: 0;
   right: 5%;
   bottom: 20%;
 }
@@ -73,11 +73,13 @@
 @keyframes e1 {
   0% {
     opacity: 1;
+    z-index: 999;
     right: -10%;
     bottom: 20%;
   }
   100% {
     opacity: 1;
+    z-index: 999;
     right: 5%;
     bottom: 15%;
   }
@@ -96,11 +98,13 @@
 @keyframes e2 {
   0% {
     opacity: 1;
+    z-index: 999;
     right: -10%;
     bottom: 10%;
   }
   100% {
     opacity: 1;
+    z-index: 999;
     right: 15%;
     bottom: 5%;
   }
@@ -119,11 +123,13 @@
 @keyframes e3 {
   0% {
     opacity: 1;
+    z-index: 999;
     left: -10%;
     bottom: 10%;
   }
   100% {
     opacity: 1;
+    z-index: 999;
     left: 10%;
     bottom: 6%;
   }
@@ -142,13 +148,219 @@
 @keyframes e4 {
   0% {
     opacity: 1;
+    z-index: 999;
     left: -10%;
     bottom: 20%;
   }
   100% {
     opacity: 1;
+    z-index: 999;
     left: 5%;
     bottom: 18%;
+  }
+}
+
+.e5 {
+  animation-delay: 1s;
+  animation-name: e5;
+  right: 10%;
+  bottom: 10%;
+  animation-delay: 13.4s;
+  .phraseBox {
+    animation-delay: 13.4s;
+  }
+}
+
+@keyframes e5 {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    right: -10%;
+    bottom: 15%;
+  }
+  100% {
+    opacity: 1;
+    z-index: 999;
+    right: 10%;
+    bottom: 10%;
+  }
+}
+
+.e6 {
+  animation-delay: 1s;
+  animation-name: e6;
+  right: 30%;
+  bottom: 3%;
+  animation-delay: 16.4s;
+  .phraseBox {
+    animation-delay: 16.4s;
+  }
+}
+
+@keyframes e6 {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    right: -10%;
+    bottom: 10%;
+  }
+  100% {
+    opacity: 1;
+    z-index: 999;
+    right: 30%;
+    bottom: 3%;
+  }
+}
+
+.e7 {
+  left: 25%;
+  bottom: 18%;
+  animation-delay: 19s;
+  animation-name: e7;
+.phraseBox {
+    animation-delay: 19.4s;
+}
+}
+
+@keyframes e7 {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    left: -5%;
+    bottom: 20%;
+  }
+  100% {
+    opacity: 1;
+    z-index: 999;
+    left: 25%;
+    bottom: 18%;
+  }
+}
+
+.e8 {
+  animation-delay: 1s;
+  animation-name: e8;
+  right: 25%;
+  bottom: 15%;
+  animation-delay: 21.4s;
+  .phraseBox {
+    animation-delay: 21.4s;
+  }
+}
+
+@keyframes e8 {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    right: -10%;
+    bottom: 20%;
+  }
+  100% {
+    opacity: 1;
+    z-index: 999;
+    right: 25%;
+    bottom: 15%;
+  }
+}
+
+.e9 {
+  left: 30%;
+  bottom: 3%;
+  animation-delay: 23s;
+  animation-name: e9;
+  .phraseBox {
+    animation-delay: 23.4s;
+  }
+}
+
+@keyframes e9 {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    left: -5%;
+    bottom: 10%;
+  }
+  100% {
+    opacity: 1;
+    z-index: 999;
+    left: 30%;
+    bottom: 3%;
+  }
+}
+
+.e10 {
+  left: 10%;
+  bottom: 20%;
+  animation-delay: 26s;
+  animation-name: e10;
+  .phraseBox {
+    animation-delay: 26.4s;
+  }
+}
+
+@keyframes e10 {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    left: -5%;
+    bottom: 30%;
+  }
+  100% {
+    opacity: 1;
+    z-index: 999;
+    left: 10%;
+    bottom: 20%;
+  }
+}
+
+.e11 {
+  left: 30%;
+  bottom: 20%;
+  animation-delay: 29s;
+  animation-name: e11;
+  .phraseBox {
+    animation-delay: 29.4s;
+  }
+}
+
+@keyframes e11 {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    left: -5%;
+    bottom: 30%;
+  }
+  100% {
+    opacity: 1;
+    z-index: 999;
+    left: 30%;
+    bottom: 20%;
+  }
+}
+
+.e12 {
+  animation-delay: 1s;
+  animation-name: e12;
+  right: 30%;
+  bottom: 5%;
+  animation-delay: 31.4s;
+  .phraseBox {
+    animation-delay: 31.4s;
+  }
+}
+
+@keyframes e12 {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    right: -10%;
+    bottom: 20%;
+  }
+  100% {
+    opacity: 1;
+    z-index: 999;
+    right: 30%;
+    bottom: 5%;
   }
 }
 
@@ -162,6 +374,7 @@
   animation-fill-mode: forwards;
   animation-delay: 0s; 
   opacity: 1;
+  z-index: 999;
 }
 
 @keyframes active {
@@ -182,6 +395,7 @@
   animation-fill-mode: forwards;
   animation-duration: 1s;
   opacity: 1;
+  z-index: 999;
 }
 
 @keyframes mistake {

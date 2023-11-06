@@ -5,7 +5,7 @@ import style from './MiddleNote.module.scss'
 import clickHand from '../../assets/clickHand.svg'
 import bubbleGuy from '../../assets/bubbleGuy.svg'
 import { useAppDispatch } from '../../store/store'
-import { changeStep } from '../../store/reducers'
+import { changeStep } from '../../store/stepReducer'
 
 const MiddleNote = () => {
 

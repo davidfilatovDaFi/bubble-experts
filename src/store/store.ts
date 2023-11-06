@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch, useSelector } from 'react-redux'
 import { TypedUseSelectorHook } from 'react-redux'
-import stepReducer from './reducers'
+import stepReducer from './stepReducer'
+import amountReducer from './amountReducer'
 
 export const store = configureStore({
   reducer: {
-    step: stepReducer
+    step: stepReducer,
+    expertsAmount: amountReducer
   },
 })
 

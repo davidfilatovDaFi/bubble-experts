@@ -1,5 +1,6 @@
 import Note from './components/Note';
 import PlayZone from './components/PlayZone/PlayZone';
+import ResultNote from './components/ResultNote/ResultNote';
 import { useAppSelector } from './store/store';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <div className='wrapper'>
-      {step === 'play' ? <PlayZone/> : <Note/>}
+      {step === 'play' ? <PlayZone/> : step === 'result' ? <ResultNote/> : <Note/>}
     </div>
   );
 }

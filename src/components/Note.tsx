@@ -10,7 +10,6 @@ const Note = () => {
 
   return (
     <div className="note">
-      <div className="sky"></div>
       <img className="noteImg" src={note} alt="" />
       {step === "start" ? (
         <StartNote />

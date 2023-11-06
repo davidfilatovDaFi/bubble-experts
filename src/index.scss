@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-html {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,6 +21,7 @@ body {
   background-size: cover;
   overflow: hidden;
   text-transform: uppercase;
+  color: #322642;
 }
 
 .note {
@@ -37,6 +38,7 @@ body {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  height: 100%;
 }
 
 .noteImg {
@@ -62,7 +64,7 @@ p {
   width: 296px;
   transition: 0.2s;
   &:hover {
-    width: 93%;
+    transform: scale(93%);
   }
 }
 

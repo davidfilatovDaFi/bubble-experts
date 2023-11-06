@@ -9,7 +9,7 @@ const initialState: initState = {
   step: 'start',
 }
 
-export const counterSlice = createSlice({
+export const stepSlice = createSlice({
   name: 'step',
   initialState,
   reducers: {
@@ -19,6 +19,6 @@ export const counterSlice = createSlice({
   },
 })
 
-export const { changeStep } = counterSlice.actions
+export const { changeStep } = stepSlice.actions
 
-export default counterSlice.reducer
+export default stepSlice.reducer
