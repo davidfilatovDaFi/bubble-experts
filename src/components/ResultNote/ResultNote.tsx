@@ -17,7 +17,7 @@ const ResultNote = () => {
   const amount = useAppSelector(state => state.expertsAmount.amount)
 
   return (
-    <div className={style.wrapper}>
+    <div className={`wrapper ${style.wrapper}`}>
       <div className="note">
         <img className="noteImg" src={note} alt="" />
         <div className={style.content}>
@@ -47,9 +47,9 @@ const ResultNote = () => {
             />
             <span className={style.share}>поделиться</span>
             <div className={style.icons}>
-              <img src={telegram} alt="" />
-              <img src={vk} alt="" />
-              <img src={insta} alt="" />
+              <img className={style.icon} src={telegram} alt="" />
+              <img className={style.icon} src={vk} alt="" />
+              <img className={style.icon} src={insta} alt="" />
             </div>
           </div>
         </div>

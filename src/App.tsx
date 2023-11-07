@@ -9,7 +9,13 @@ function App() {
 
   return (
     <div className='wrapper'>
-      {step === 'play' ? <PlayZone/> : step === 'result' ? <ResultNote/> : <Note/>}
+      {step === "result" ? (
+        <ResultNote />
+      ) : (
+        <div className=" wrapper wrapperDay">
+          {step === "play" ? <PlayZone /> : <Note />}
+        </div>
+      )}
     </div>
   );
 }

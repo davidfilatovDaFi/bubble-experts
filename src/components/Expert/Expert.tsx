@@ -16,14 +16,18 @@ interface IExpert {
   text: string
 }
 
-const Expert: FC<{expert: IExpert}> = memo(({expert}) => {
+const Expert: FC<{expert: IExpert, minusTime: () => void}> = memo(({expert, minusTime}) => {
 
   const [active, setActive] = useState<boolean>(false)
   const dispatch = useAppDispatch()
 
   const toBubbleExpert = () => {
     setActive(true)
-    if (expert.lier) dispatch(addExpert())
+    if (expert.lier) {
+      dispatch(addExpert())
+    } else {
+      minusTime()
+    }
   }
 
   return (

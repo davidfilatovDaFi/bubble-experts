@@ -17,11 +17,15 @@ body {
   justify-content: center;
   font-family: 'Press Start 2P';
   min-height: 100vh;
-  background: url('./assets/BG.jpg') no-repeat bottom;
-  background-size: cover;
+  width: 100%;
   overflow: hidden;
   text-transform: uppercase;
   color: #322642;
+}
+
+.wrapperDay {
+  background: url('./assets/BG.jpg') no-repeat bottom;
+  background-size: cover;
 }
 
 .note {
@@ -33,6 +37,7 @@ body {
 .content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 58px 23px;
   overflow: hidden;
@@ -63,7 +68,7 @@ p {
 .button {
   width: 296px;
   transition: 0.2s;
-  &:hover {
+  &:active  {
     transform: scale(93%);
   }
 }
