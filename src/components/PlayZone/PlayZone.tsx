@@ -22,6 +22,7 @@ const PlayZone = () => {
   
   useEffect(() => {
     if (isNotLie) setSeconds(seconds - 10)
+    setIsNotLie(false)
   }, [isNotLie])
 
   useEffect(() => {

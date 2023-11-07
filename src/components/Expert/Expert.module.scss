@@ -113,10 +113,10 @@
 .e3 {
   left: 10%;
   bottom: 15%;
-  animation-delay: 7s;
+  animation-delay: 6s;
   animation-name: e3;
   .phraseBox {
-    animation-delay: 7.4s;
+    animation-delay: 6.4s;
   }
 }
 
@@ -138,10 +138,10 @@
 .e4 {
   left: 5%;
   bottom: 18%;
-  animation-delay: 10s;
+  animation-delay: 9s;
   animation-name: e4;
 .phraseBox {
-    animation-delay: 10.4s;
+    animation-delay: 9.4s;
 }
 }
 
@@ -165,9 +165,9 @@
   animation-name: e5;
   right: 10%;
   bottom: 10%;
-  animation-delay: 13.4s;
+  animation-delay: 11s;
   .phraseBox {
-    animation-delay: 13.4s;
+    animation-delay: 11.4s;
   }
 }
 
@@ -191,9 +191,9 @@
   animation-name: e6;
   right: 30%;
   bottom: 3%;
-  animation-delay: 16.4s;
+  animation-delay: 14.4s;
   .phraseBox {
-    animation-delay: 16.4s;
+    animation-delay: 14.4s;
   }
 }
 
@@ -215,10 +215,10 @@
 .e7 {
   left: 25%;
   bottom: 18%;
-  animation-delay: 19s;
+  animation-delay: 16s;
   animation-name: e7;
 .phraseBox {
-    animation-delay: 19.4s;
+    animation-delay: 16.4s;
 }
 }
 
@@ -242,9 +242,9 @@
   animation-name: e8;
   right: 25%;
   bottom: 15%;
-  animation-delay: 21.4s;
+  animation-delay: 18.4s;
   .phraseBox {
-    animation-delay: 21.4s;
+    animation-delay: 18.4s;
   }
 }
 
@@ -266,10 +266,10 @@
 .e9 {
   left: 30%;
   bottom: 3%;
-  animation-delay: 23s;
+  animation-delay: 20s;
   animation-name: e9;
   .phraseBox {
-    animation-delay: 23.4s;
+    animation-delay: 20.4s;
   }
 }
 
@@ -291,10 +291,10 @@
 .e10 {
   left: 10%;
   bottom: 20%;
-  animation-delay: 26s;
+  animation-delay: 23s;
   animation-name: e10;
   .phraseBox {
-    animation-delay: 26.4s;
+    animation-delay: 23.4s;
   }
 }
 
@@ -316,10 +316,10 @@
 .e11 {
   left: 30%;
   bottom: 20%;
-  animation-delay: 29s;
+  animation-delay: 25s;
   animation-name: e11;
   .phraseBox {
-    animation-delay: 29.4s;
+    animation-delay: 25.4s;
   }
 }
 
@@ -343,9 +343,9 @@
   animation-name: e12;
   right: 30%;
   bottom: 5%;
-  animation-delay: 31.4s;
+  animation-delay: 27.4s;
   .phraseBox {
-    animation-delay: 31.4s;
+    animation-delay: 27.4s;
   }
 }
 
@@ -404,5 +404,20 @@
   }
   100% {
     display: none;
+  }
+}
+
+.rotate {
+  animation-name: rotateExpert;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+
+@keyframes rotateExpert {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-50deg);
   }
 }

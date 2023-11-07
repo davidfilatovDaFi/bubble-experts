@@ -51,7 +51,7 @@ const Expert: FC<{expert: IExpert, minusTime: () => void}> = memo(({expert, minu
           alt=""
         />
       </div>
-      <img onClick={toBubbleExpert} src={expert.url} alt="" />
+      <img className={active && expert.lier ? style.rotate : ''} onClick={toBubbleExpert} src={expert.url} alt="" />
       {expert.lier 
       ? <img className={active ? style.bubble : style.none} src={bubble} alt="" />
       : <img className={active ? style.cannot : style.none} src={cannot} alt="" />}
