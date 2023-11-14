@@ -1,11 +1,11 @@
-import timer from '../../assets/timer.svg'
 import style from './PlayZone.module.scss'
-import head from '../../assets/head.svg'
 import Expert from '../Expert/Expert'
 import { experts } from '../../constants/constants'
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/store'
 import { changeStep } from '../../store/stepReducer'
+import Head from '../../assets/Head'
+import Timer from '../../assets/Timer'
 
 const PlayZone = () => {
   const [seconds, setSeconds] = useState(59)
@@ -42,11 +42,11 @@ const PlayZone = () => {
   return (
     <div className={style.play}>
       <div className={style.container}>
-        <img src={head} alt="" />
+        <Head/>
         <span>{bubbleExperts}/10</span>
       </div>
       <div className={seconds > 30 ? style.container : `${style.container} ${style.hurry}`}>
-        <img src={timer} alt="" />
+        <Timer/>
         <span>
           00:{seconds.toString().length == 2 ? seconds : "0" + seconds}
         </span>
